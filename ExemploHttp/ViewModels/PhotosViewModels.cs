@@ -1,22 +1,17 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using ExemploHttp.Models;
-using ExemploHttp.Services;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ExemploHttp.Services;
-using System.Windows.Input;
 
 namespace ExemploHttp.ViewModels
 {
-    public partial class PostsViewModels : ObservableObject
+    public partial class PhotosViewModels: ObservableObject
     {
         [ObservableProperty]
 
-        ObservableCollection<Post> posts;
+        ObservableCollection<Photos> photos;
 
 
         public ICommand getPostsCommand { get; }

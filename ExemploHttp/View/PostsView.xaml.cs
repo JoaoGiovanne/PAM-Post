@@ -5,8 +5,8 @@ public partial class PostsView : ContentPage
 {
 	public PostsView()
 	{
-		BindingContext = new PostsViewModels();
 		InitializeComponent();
+		BindingContext = new PostsViewModels();
 
 	}
 }
