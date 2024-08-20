@@ -11,8 +11,8 @@
     <TabBar>
         <ShellContent
     Title="Home"
-    ContentTemplate="{DataTemplate local:PostsView}"
-    Route="PostView" />
+    ContentTemplate="{DataTemplate local:PhotosView}"
+    Route="PhotosView" />
     </TabBar>
 
 </Shell>

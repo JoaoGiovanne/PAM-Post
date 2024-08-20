@@ -1,30 +1,34 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
+using ExemploHttp.Models;
+using ExemploHttp.Services;
 using System.Collections.Generic;
+using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ExemploHttp.ViewModels
 {
-    public partial class PhotosViewModels: ObservableObject
+    public partial class PhotosViewModels : ObservableObject
     {
         [ObservableProperty]
 
-        ObservableCollection<Photos> photos;
+        ObservableCollection<Photo> photos;
 
 
-        public ICommand getPostsCommand { get; }
+        public ICommand getPhotosCommand { get; }
 
-        public PostsViewModels()
+        public PhotosViewModels()
         {
-            getPostsCommand = new Command(getPosts);
+            getPhotosCommand = new Command(getPhoto);
         }
 
-        public async void getPosts()
+        public async void getPhoto()
         {
-            RestService postService = new RestService();
-            Posts = await postService.getPostAsync();
+            RestServicePhotos photosService = new RestServicePhotos();
+            photos = await photosService.getPhotosAsync();
         }
     }
 }

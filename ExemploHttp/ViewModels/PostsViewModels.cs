@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ExemploHttp.Services;
 using System.Windows.Input;
 
 namespace ExemploHttp.ViewModels
@@ -29,7 +28,7 @@ namespace ExemploHttp.ViewModels
         public async void getPosts()
         {
             RestService postService = new RestService();
-            Posts = await postService.getPostAsync();
+            Posts = await postService.getPostsCommand();
         }
     }
 }

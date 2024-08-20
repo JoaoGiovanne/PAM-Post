@@ -26,7 +26,7 @@ namespace ExemploHttp.Services
 
 		}
 
-        public async Task<ObservableCollection<Post>> getPostAsync()
+        public async Task<ObservableCollection<Post>> getPostsCommand()
         {
 		
 			Uri uri = new Uri("https://jsonplaceholder.typicode.com/posts");

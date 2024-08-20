@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExemploHttp.Models
 {
-    public class Photos
+    public class Photo
     {
         public int AalbumId { get; set; }
         public int id { get; set; }
