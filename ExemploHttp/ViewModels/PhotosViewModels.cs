@@ -28,7 +28,7 @@ namespace ExemploHttp.ViewModels
         public async void getPhoto()
         {
             RestServicePhotos photosService = new RestServicePhotos();
-            photos = await photosService.getPhotosAsync();
+            Photos = await photosService.getPhotosAsync();
         }
     }
 }
